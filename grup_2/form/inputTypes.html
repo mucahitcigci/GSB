@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Types (Tipler)</title>
+  </head>
+  <body>
+    <h1>HTML FORM UYGULAMALARI</h1>
+    <h2>İnput Types</h2>
+    <form>
+      <label for="name"> Ad-Soyad</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Lütfen adınızı giriniz.."
+        required
+      />
+      <label for="tc_no"> Tc Kimlik No:</label>
+      <input
+        type="text"
+        id="tc_no"
+        placeholder="Lütfen Tc Giriniz"
+        required
+      /><br />
+      <input type="radio" id="male" value="MALE" name="gender" required />
+      <label for="male"> Erkek</label>
+      <input type="radio" id="female" value="FEMALE" name="gender" required />
+      <label for="female">Kadın</label><br />
+      <label for="dgunu">Doğum Tarihi</label>
+      <input type="date" id="dgunu" name="dgunu" />
+      <hr />
+      <label for="hobiler"><h3>HOBİLERİM</h3></label>
+      <input type="checkbox" id="futbol" name="hobi1" value="Futbol" />
+      <label for="futbol">Futbol</label><br />
+      <input type="checkbox" id="basketbol" name="hobi2" value="Basketbol" />
+      <label for="basketbol"> Basketbol </label> <br />
+      <input type="checkbox" id="tenis" name="hobi3" value="Tenis" />
+      <label for="tenis"> Tenis </label> <br />
+      <hr />
+      <label for="email">E Posta Adresinizi Giriniz</label>
+      <input type="email" id="email" name="email" />
+      <hr />
+      <label for="renk_palet">Lütfen bir renk seçiniz</label>
+      <input type="color" id="renk_palet" value="#ffffff" />
+
+      <hr />
+      <label for="dosya">Lütfen bir dosya seçin:</label>
+      <input type="file" id="dosya" name="dosya" /><br />
+      <input
+        type="button"
+        onclick="alert('Emircan Selam')"
+        value="Beni Tıkla"
+      />
+      <input type="submit" value="Gönder" />
+    </form>
+  </body>
+</html>

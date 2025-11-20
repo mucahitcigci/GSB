@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex; /* Flexbox ile hizalama */
+        justify-content: center; /* Yatayda ortalama */
+        align-items: center; /* Dikeyde ortalama */
+        height: 100vh; /* Sayfanın tamamını kaplasın */
+        padding: 50px; /* kenar boşlukları ayarlama*/
+      }
+      .form {
+        padding: 20px; /* İçerik ile kenarlar arasındaki boşluk */
+        background-color: #e9e9f1; /* Arka plan rengi (açık gri-mavi) */
+        border: 1px solid #bebed6; /* Gri-mor renkte 1px kenarlık */
+        width: 600px; /* Formun genişliği */
+        max-width: 100%; /* Genişlik, ekran boyutunu aşmaz */
+      }
+
+      .form input::placeholder,
+      .form textarea::placeholder,
+      .form select::placeholder {
+        opacity: 0.8; /* Yer tutucu (placeholder) metnin opaklık seviyesi */
+      }
+
+      .form textarea {
+        width: 100%; /* Metin kutusunun genişliği, alanın tamamını kaplar */
+        height: 100px; /* Metin kutusunun yüksekliği */
+      }
+
+      .form .input-wrap {
+        padding: 10px 0; /* Üst ve alt boşluk */
+      }
+
+      .form .input {
+        background-color: #fff; /* Arka plan rengi (beyaz) */
+        border: 1px solid #bebed6; /* Kenarlık rengi (gri-mor) */
+        width: 100%; /* Genişlik, bulunduğu alanın tamamını kaplar */
+        height: 48px; /* Giriş alanının yüksekliği */
+        padding: 10px 15px; /* İçerik ile kenarlar arasındaki boşluk */
+      }
+
+      .form input:not([type="radio"]) {
+        width: 90%; /* Radyo butonları dışındaki giriş alanlarının genişliği */
+      }
+
+      .form label.input-label {
+        display: block; /* Blok eleman yapar, altına satır atlaması sağlar */
+        font-size: 16px; /* Yazı boyutu */
+        font-weight: 600; /* Yazıyı kalınlaştırır */
+        margin-bottom: 5px; /* Altında 5px boşluk bırakır */
+      }
+
+      .form .radio-label {
+        font-weight: 600; /* Yazıyı kalınlaştırır */
+        font-size: 13px; /* Yazı boyutu */
+      }
+
+      .form input[type="file"] {
+        padding-left: 0; /* Sol kenarda boşluk bırakmaz */
+      }
+
+      .form input[type="submit"] {
+        color: #fff; /* Yazı rengi (beyaz) */
+        border-color: transparent; /* Kenarlık rengini görünmez yapar */
+        background-color: #e21346; /* Arka plan rengi (kırmızı ton) */
+        font-weight: 600; /* Yazıyı kalınlaştırır */
+        font-size: 16px; /* Yazı boyutu */
+        padding: 8px 15px; /* Kenar boşlukları (üst-alt: 8px, sağ-sol: 15px) */
+        transition: 0.3s ease all; /* Tüm stil değişimlerinde yumuşak geçiş */
+      }
+
+      .form input[type="submit"]:hover {
+        background-color: #c00d3a; /* Fare üzerine gelince arka plan rengi */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="form">
+        <div class="input-wrap">
+          <label class="input-label" for="name">Adınız/Soyadınız</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input"
+            placeholder="Adınız/soyadınız"
+            required
+          />
+        </div>
+        <div class="input-wrap">
+          <label class="input-label" for="phone">Telefon Numaranız</label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            class="input"
+            placeholder="(5xx)(123 45 67)"
+            required
+          />
+        </div>
+        <div class="input-wrap">
+          <label class="input-label" for="email">E-Posta Adresiniz</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input"
+            placeholder="E-Posta Adresiniz"
+            required
+          />
+        </div>
+
+        <div class="input-wrap">
+          <label class="input-label" for="dogumyeri">Doğum Yeriniz</label>
+          <input
+            type="text"
+            id="dogumyeri"
+            class="input"
+            name="dogumyeri"
+            placeholder="İl/ilçe"
+            required
+          />
+        </div>
+
+        <div class="input-wrap">
+          <label class="input-label" for="birthday">Doğum Yeriniz</label>
+          <input
+            type="date"
+            id="birthday"
+            name="birthday"
+            class="input"
+            placeholder="İl/ilçe"
+            required
+          />
+        </div>
+        <div class="input-wrap">
+          <label class="input-label" for="">Eğitim Durumunuz</label>
+          <input
+            class="radio-label"
+            type="radio"
+            name="education"
+            value="lise"
+            id="edu1"
+          />
+          <label class="radio-label" for="edu1">Lise</label>
+
+          <input type="radio" name="education" value="lise" id="edu2" />
+          <label class="radio-label" for="edu2">Lisans</label>
+
+          <input type="radio" name="education" value="lise" id="edu3" />
+          <label class="radio-label" for="edu3">Yüksek lisans</label>
+        </div>
+        <div class="input-wrap">
+          <label class="input-label" for="gender">Cinsiyetiniz</label>
+          <select class="input" id="gender" name="gender">
+            <option selected disabled>Cinsiyetiniz</option>
+            <option value="Erkek">Erkek</option>
+            <option value="Bayan">Bayan</option>
+          </select>
+        </div>
+        <div class="input-wrap">
+          <textarea name="message" id="message" class="textarea"></textarea>
+        </div>
+        <div class="input-wrap file-wrap">
+          <label class="input-label" for="file">CV YÜKLE</label>
+          <input type="file" name="file" id="file" />
+        </div>
+        <input type="submit" id="submit" name="submit" value="FORMU GÖNDER" />
+      </form>
+    </div>
+  </body>
+</html>
