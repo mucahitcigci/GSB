@@ -1,0 +1,136 @@
+/******************************************************/
+/*************GİRİŞ SAYFASI STİL ÖZELLİKLERİ************/
+.giris-form-body {
+  background-color: #bddde4; /*Arkapaln rengi */
+  font-family: Arial, Helvetica, sans-serif; /*yazı tipi ailesi*/
+  display: flex; /*Flexbox ile ortalama*/
+  justify-content: center; /*yatayda ortalama*/
+  align-items: center; /*Dikeyde ortalama*/
+  height: 100vh; /*Sayfa yüksekliği kadar alan kaplama*/
+}
+/*Giriş kutusu kapsayıcısı*/
+.login-container {
+  background-color: #eff7f9; /*zemin rengi*/
+  padding: 2rem; /*iç boşluk*/
+  border-radius: 10px; /*köşeleri yuvarlar*/
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /*Hafif gölge efekti*/
+  width: 300px; /*Sabit Genişlik*/
+}
+/*Başlık Stili*/
+.login-container h2 {
+  text-align: center; /*sayfada ortala*/
+  margin-bottom: 1.5rem; /*Alt boşluk*/
+  color: #333; /*yzı rengi*/
+}
+/*Etiket label stili*/
+.login-container label {
+  display: block; /*alt alta gelsin*/
+  margin-bottom: 0.5rem; /*etiket ve input arası boşluk*/
+  color: #555; /*label yazı rengi*/
+}
+/*E-Posta ve şifre giriş kutusu stili*/
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%; /*input genişliği*/
+  padding: 0.5rem; /*iç boşluk*/
+  margin-bottom: 1rem; /*alt boşluk*/
+  border: 1px solid #ccc; /*çerçeve rengi*/
+  border-radius: 5px; /*yuvarlanmış çerçeve köşesi*/
+}
+/*login-container içerisinde yer alan "beni hatırla" kısmı için kutu ve yazı hizalama*/
+.login-container .remember {
+  display: flex; /*yan yana hizalama*/
+  align-items: center; /*dikeyde ortala*/
+  margin-bottom: 0.5rem; /*Alt boşluk*/
+}
+/*"beni hatırla" checkboxı*/
+.login-container .remember input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+/*Giriş butonu stili*/
+.login-container button {
+  width: 100%;
+  padding: 0.6rem;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.login-container button:hover {
+  background: #2178e9b1;
+}
+/*******************************************/
+/********** ANASAYFA STİL ÖZELLİKLERİ *******/
+.sayfa {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: hsl(36, 65%, 91%);
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  padding: 20px;
+  background-color: #ef7d7d;
+}
+header h1 {
+  font-size: 24px;
+  margin: 0;
+  color: wheat;
+  flex: 1;
+  text-align: left;
+}
+header,
+footer {
+  background-color: #ef7d7d;
+  color: wheat;
+  padding: 20px;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+#nav-menu a {
+  text-decoration: none;
+  color: wheat;
+  position: relative;
+  font-weight: bold;
+}
+#nav-menu a:hover {
+  color: rgb(197, 181, 152);
+  transition-duration: 0.5s;
+}
+main {
+  padding: 20px;
+}
+section {
+  margin-bottom: 40px;
+}
+footer nav ul {
+  flex-direction: column;
+  margin-top: 10px;
+}
+footer nav ul li a {
+  text-decoration: none;
+  color: wheat;
+}
+footer nav ul li a:hover {
+  color: rgb(230, 191, 119);
+  transition-duration: 0.5s;
+}

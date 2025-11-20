@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap</title>
+    <style>
+      body {
+        background-color: #bddde4; /*Arkapaln rengi */
+        font-family: Arial, Helvetica, sans-serif; /*yazı tipi ailesi*/
+        display: flex; /*Flexbox ile ortalama*/
+        justify-content: center; /*yatayda ortalama*/
+        align-items: center; /*Dikeyde ortalama*/
+        height: 100vh; /*Sayfa yüksekliği kadar alan kaplama*/
+      }
+      /*Giriş kutusu kapsayıcısı*/
+      .login-container {
+        background-color: #eff7f9; /*zemin rengi*/
+        padding: 2rem; /*iç boşluk*/
+        border-radius: 10px; /*köşeleri yuvarlar*/
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /*Hafif gölge efekti*/
+        width: 300px; /*Sabit Genişlik*/
+      }
+      /*Başlık Stili*/
+      .login-container h2 {
+        text-align: center; /*sayfada ortala*/
+        margin-bottom: 1.5rem; /*Alt boşluk*/
+        color: #333; /*yzı rengi*/
+      }
+      /*Etiket label stili*/
+      .login-container label {
+        display: block; /*alt alta gelsin*/
+        margin-bottom: 0.5rem; /*etiket ve input arası boşluk*/
+        color: #555; /*label yazı rengi*/
+      }
+      /*E-Posta ve şifre giriş kutusu stili*/
+      .login-container input[type="email"],
+      .login-container input[type="password"] {
+        width: 100%; /*input genişliği*/
+        padding: 0.5rem; /*iç boşluk*/
+        margin-bottom: 1rem; /*alt boşluk*/
+        border: 1px solid #ccc; /*çerçeve rengi*/
+        border-radius: 5px; /*yuvarlanmış çerçeve köşesi*/
+      }
+      /*login-container içerisinde yer alan "beni hatırla" kısmı için kutu ve yazı hizalama*/
+      .login-container .remember {
+        display: flex; /*yan yana hizalama*/
+        align-items: center; /*dikeyde ortala*/
+        margin-bottom: 0.5rem; /*Alt boşluk*/
+      }
+      /*"beni hatırla" checkboxı*/
+      .login-container .remember input[type="checkbox"] {
+        margin-right: 0.5rem;
+      }
+      /*Giriş butonu stili*/
+      .login-container button {
+        width: 100%;
+        padding: 0.6rem;
+        background: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      .login-container button:hover {
+        background: #2178e9b1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Giriş Yap</h2>
+      <form>
+        <label for="mail">Kullanıcı Adı veya E-posta</label>
+        <input type="email" id="mail" name="username" required />
+        <label for="psw"> Şifre</label>
+        <input type="password" name="password" id="psw" required />
+        <div class="remember">
+          <input type="checkbox" id="remember" name="remember" />
+          <label for="remember">Beni Hatırla</label>
+        </div>
+        <button type="submit">Giriş Yap</button>
+      </form>
+    </div>
+  </body>
+</html>

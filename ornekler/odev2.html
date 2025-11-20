@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ödev 2</title>
+    <style>
+      /* Sayfa genelini düzenleyen stil */
+      body {
+        font-family: Arial, sans-serif; /* Yazı tipini belirler */
+
+        display: flex;
+        justify-content: center; /* İçeriği yatayda ortalar */
+        align-items: center; /* İçeriği dikeyde ortalar */
+      }
+      h2 {
+        color: rgb(36, 159, 95);
+      }
+      /* Sayfa içeriğini saran ana konteyner */
+      .container {
+        padding: 25px; /* Kenarlardan 25px iç boşluk bırakır */
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti ekler */
+        width: 100%; /* Konteyner genişliğini belirler */
+      }
+
+      /* Başlık stilleri */
+      .baslik {
+        color: #4a90e2; /* Açık mavi tonunu belirler */
+        text-align: center; /* Başlığı ortalar */
+        font-size: 24px; /* Yazı boyutunu belirler */
+        margin-bottom: 20px; /* Alt boşluk ekler */
+      }
+
+      /* Satır (row) içindeki elemanların düzeni */
+      .row {
+        display: flex; /* Öğeleri yan yana dizer */
+        justify-content: space-between; /* Öğeler arasında boşluk bırakır */
+        gap: 25px; /* Elemanlar arasında 25px boşluk bırakır */
+        margin-bottom: 20px; /* Alt boşluk ekler */
+      }
+
+      /* Şehir kartlarının düzeni */
+      .citycard {
+        background-color: #f39797; /* Açık gri arka plan rengi */
+        padding: 15px; /* İç boşluk ekler */
+        border-radius: 5px; /* Köşeleri yuvarlatır */
+        text-align: center; /* İçeriği ortalar */
+        flex: 1; /* Tüm kartları eşit genişlikte yapar */
+      }
+
+      /* Tablo ve liste sütunlarının düzeni */
+      .col {
+        flex: 1; /* Sütunların eşit genişlikte olmasını sağlar */
+
+        padding: 15px; /* İç boşluk ekler */
+
+        text-align: center; /* İçeriği ortalar */
+      }
+
+      /* Form düzeni */
+      form {
+        display: flex;
+        flex-direction: column; /* Form elemanlarını dikey hizalar */
+        gap: 10px; /* Form elemanları arasında boşluk bırakır */
+      }
+
+      label {
+        font-weight: bold; /* Etiketleri kalın yapar */
+      }
+
+      input {
+        padding: 8px; /* İç boşluk ekler */
+        border: 1px solid #ccc; /* Kenarlık ekler */
+        border-radius: 5px; /* Köşeleri yuvarlatır */
+        width: 100%; /* Genişliği %100 yapar */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--CONTAİNER PENCERE KENARLARINA PADDİNG OLARAK 25PX UZAKLIKTA OLACAK-->
+      <h2 class="baslik">MERHABA DÜNYA</h2>
+      <!--BAŞLIK MAVİNİN AÇIK TONU OLACAK VE SAYFADA ORTALANMIŞ OLACAK-->
+      <div class="row">
+        <!--BURADA ŞEHİR KARTLARI YANYANA OLACAK VE ARALARINDA 25 PX BOŞLUK OLACAK-->
+        <div class="citycard">
+          <h2>İstanbul</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit iste
+            vel similique autem vero sapiente velit aperiam? Quidem natus neque,
+            earum inventore illo ad ipsa, eius quod accusamus tempora dolor.
+          </p>
+        </div>
+        <div class="citycard">
+          <h2>Ankara</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit iste
+            vel similique autem vero sapiente velit aperiam? Quidem natus neque,
+            earum inventore illo ad ipsa, eius quod accusamus tempora dolor.
+          </p>
+        </div>
+        <div class="citycard">
+          <h2>İzmir</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit iste
+            vel similique autem vero sapiente velit aperiam? Quidem natus neque,
+            earum inventore illo ad ipsa, eius quod accusamus tempora dolor.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <!--BURADA TABLO VE LİSTE SAYFADA YANYANA DURACAK -->
+        <div class="col">BURADA TABLO OLACAK</div>
+        <div class="col">LİSTE OLACAK</div>
+      </div>
+      <form action="">
+        <label for="ad">Adınız:</label>
+        <input type="text" id="ad" name="ad" required />
+        <label for="mail">Mail</label>
+        <input type="mail" id="mail" name="mail" required />
+      </form>
+    </div>
+  </body>
+</html>
