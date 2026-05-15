@@ -1,1 +1,1 @@
-# Gençlik ve Spor Bakanlığı Web Tasarım Kursu Ders Uygulamaları Reposudur.
+# Gençlik ve Spor Bakanlığı Web Tasarım Kursu Ders Uygulamaları Reposudur. Öğrencilerim için açılmıştır.
